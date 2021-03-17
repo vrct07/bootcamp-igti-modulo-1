@@ -54,7 +54,7 @@ fs.readFile(arquivo,"utf-8", function(err, data) {
             mediaSal = (somaSal / obj.funcionarios.length);
             
             
-            console.log("A média Salarial da empresa é: " + mediaSal);
+            console.log("A média Salarial da empresa é: " + mediaSal.toFixed(2));
             
         } 
         
