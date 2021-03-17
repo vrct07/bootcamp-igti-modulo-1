@@ -42,7 +42,7 @@ fs.readFile(arquivo,"utf-8", function(err, data) {
             
         }
 
-        
+        //ver a média salarial da empresa.
         mediaSalarial();
         function mediaSalarial(){
             var mediaSal;
@@ -57,6 +57,39 @@ fs.readFile(arquivo,"utf-8", function(err, data) {
             console.log("A média Salarial da empresa é: " + mediaSal.toFixed(2));
             
         } 
+        
+
+        //
+        nomeMaiorSalarioSetor();
+        function nomeMaiorSalarioSetor(nomSetor){
+            fs.readFile(nomeArquivo,"utf-8",function(err,data){
+              if (err){
+                console.log(err);
+              }else{
+                var obj = JSON.parse(data);
+                var maiorSalEmpSet =0;
+                for (var i = 0; i < obj.funcionarios.length; i++){
+                  if(obj.funcionarios[i].setor === nomSetor){
+                    maiorSalEmpSet = obj.funcionarios[i].salario;
+                    break;
+                  }
+                }
+          
+                for (var i = 0; i < obj.funcionarios.length; i++){
+                  if(obj.funcionarios[i].setor === nomSetor){
+                      if(obj.funcionarios[i].salario > maiorSalEmpSet){
+                          maiorSalEmpSet = obj.funcionarios[i].salario;
+                          var nomeMaiorSalSetor = obj.funcionarios[i].nome;
+                      }
+                  }
+                }
+               console.log("Nome do funcionário(a) que tem o MAIOR salário do Setor "+ nomSetor +" é: "+ nomeMaiorSalSetor +", com salario = "+ maiorSalEmpSet);
+               console.log("");
+              }
+            });
+        
+        }
+
         
 
     } 
