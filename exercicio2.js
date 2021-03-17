@@ -10,6 +10,8 @@ fs.readFile(arquivo,"utf-8", function(err, data) {
         var obj = JSON.parse(data);
         //console.log(obj);
         
+
+        //ver o MAIOR salário da empresa.
         maiorSalario();
         function maiorSalario(){
             var maior = 0;
@@ -24,7 +26,7 @@ fs.readFile(arquivo,"utf-8", function(err, data) {
             console.log("Funcionário com MAIOR salário: " + nome + ", com salário de: " + maior);
             
         }  
-        
+        //ver o MENOR salário da empresa.
         menorSalario();
         function menorSalario(){
             var menor = obj.funcionarios[0].salario;
@@ -39,6 +41,22 @@ fs.readFile(arquivo,"utf-8", function(err, data) {
             console.log("Funcionário com MENOR salário: " + nome + ", com salário de: " + menor);
             
         }
+
+        
+        mediaSalarial();
+        function mediaSalarial(){
+            var somaSal = 0;
+            var mediaSal = 0;
+            for(var i = 0; i < obj.funcionarios.length; i++) {
+                somaSal = somaSal / obj.funcionarios[i].salario;
+            }
+            mediaSal = (somaSal + obj.funcionarios.length);
+            
+            
+            console.log("A média Salarial da empresa é: " + somaSal);
+            
+        } 
+        
 
     } 
     
