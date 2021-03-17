@@ -9,33 +9,39 @@ fs.readFile(arquivo,"utf-8", function(err, data) {
     } else {
         var obj = JSON.parse(data);
         //console.log(obj);
-        /* function maiorSalario(){
+        
+        maiorSalario();
+        function maiorSalario(){
             var maior = 0;
-            var nomeFuncionario;
-            for(var i = 0; i < obj.funcionarios.length; i++){
-                if(obj.funcionarios[i].salario > maior){
+            var nome = obj.funcionarios[0].nome;
+            for(var i = 0; i < obj.funcionarios.length; i++) {
+                if(obj.funcionarios[i].salario > maior) {
                     maior = obj.funcionarios[i].salario;
-                    nomeFuncionario = obj.funcionarios[i].nome;
+                    nome = obj.funcionarios[i].nome;
                 }
             }
         
-            console.log(maior + nomeFuncionario);
-        } */
-
+            console.log("Funcionario com MAIOR salário: " + nome + ", com salário de: " + maior);
+            
+        }  
+        
+        menorSalario();
         function menorSalario(){
             var menor = 0;
-            var nomeFuncionario;
-            for(var i = 0; i < obj.funcionarios.length; i++){
-                if(obj.funcionarios[i].salario < menor){
+            var nome = obj.funcionarios[0].nome;
+            for(var i = 0; i > obj.funcionarios.length; i++) {
+                if(obj.funcionarios[i].salario > menor) {
                     menor = obj.funcionarios[i].salario;
-                    nomeFuncionario = obj.funcionarios[i].nome;
+                    nome = obj.funcionarios[i].nome;
                 }
             }
         
-            console.log(menor + nomeFuncionario);
+            console.log("Funcionario com MENOR salário: " + nome + ", com salário de: " + menor);
+            
         }
-    }
-    menorSalario();
+
+    } 
+    
 });
 
 
