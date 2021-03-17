@@ -21,22 +21,22 @@ fs.readFile(arquivo,"utf-8", function(err, data) {
                 }
             }
         
-            console.log("Funcionario com MAIOR salário: " + nome + ", com salário de: " + maior);
+            console.log("Funcionário com MAIOR salário: " + nome + ", com salário de: " + maior);
             
         }  
         
         menorSalario();
         function menorSalario(){
-            var menor = 0;
+            var menor = obj.funcionarios[0].salario;
             var nome = obj.funcionarios[0].nome;
-            for(var i = 0; i > obj.funcionarios.length; i++) {
-                if(obj.funcionarios[i].salario > menor) {
+            for(var i = 0; i < obj.funcionarios.length; i++) {
+                if(obj.funcionarios[i].salario < menor) {
                     menor = obj.funcionarios[i].salario;
                     nome = obj.funcionarios[i].nome;
                 }
             }
         
-            console.log("Funcionario com MENOR salário: " + nome + ", com salário de: " + menor);
+            console.log("Funcionário com MENOR salário: " + nome + ", com salário de: " + menor);
             
         }
 

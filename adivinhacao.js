@@ -31,7 +31,7 @@ var readline = require( "readline");
 
 var numeroTentativas = 10;
 
-//console.log(numeroAleatorio); - aqui é mostrado qual valor o node pede.
+//console.log(numeroAleatorio); - //aqui é mostrado qual valor o node pede.
 
 pergunta();
 
