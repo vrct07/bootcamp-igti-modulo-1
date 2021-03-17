@@ -17,13 +17,13 @@ var nomSet = "Administrativo";
 //var nomSet = "Produção";
 
 //4. Função que recebe um SETOR como parâmetro e retorna o funcionário de MAIOR salário do setor informado.
-nomeMaiorSalarioSetor(nomSet);
+//nomeMaiorSalarioSetor(nomSet);
 
 //5. Função que recebe um SETOR como parâmetro e retorna o funcionário de MENOR salário do setor informado.
 //nomeMenorSalarioSetor(nomSet);
 
 //6. Função que recebe um SETOR como parâmetro e retorna a MEDIA salarial do setor informado.
-//mediaSalarialSetor(nomSet);
+mediaSalarialSetor(nomSet);
 
 //7. Função que recebe um SETOR como parâmetro e retorna a SOMA salarial do setor informado.
 //somaSalarialSetor (nomSet);
@@ -160,7 +160,7 @@ function nomeMenorSalarioSetor(nomSetor){
             }
         }
       }
-     /* console.log("Nome do funcionário(a) que tem o MENOR salário do Setor "+ nomSetor +" é: "+ nomeMenorSalSetor +", com salario = "+ menorSalEmpSet);
+    /*  console.log("Funcionário(a) que tem o MENOR salário do Setor "+ nomSetor +" é: "+ nomeMenorSalSetor +", com salario = "+ menorSalEmpSet);
      console.log(""); */
     }
   });
@@ -181,8 +181,8 @@ function mediaSalarialSetor (nomSetor){
           contSetor++;
         }
       }
-      var mediaSetor = soma / contSetor;
-      /* console.log("MÉDIA salarial do Setor: "+ nomSetor + " é = " + mediaSetor);
+      /* var mediaSetor = soma / contSetor;
+      console.log("MÉDIA salarial do Setor: "+ nomSetor + " é = " + mediaSetor);
       console.log(""); */
     }
   });
