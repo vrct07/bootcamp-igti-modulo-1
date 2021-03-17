@@ -62,9 +62,12 @@ fs.readFile(arquivo,"utf-8", function(err, data) {
         var fs = require ("fs");
 var nomeArquivo = "funcionarios.json";
 
+
+//_________________________________________________________________________________________________//
 var nomSet = "Administrativo";
 //var nomSet = "Comercial";
 //var nomSet = "Produção";
+//_________________________________________________________________________________________________//
 
 //4. Função que recebe um SETOR como parâmetro e retorna o funcionário de MAIOR salário do setor informado.
 nomeMaiorSalarioSetor(nomSet);
