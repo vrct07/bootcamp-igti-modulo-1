@@ -45,15 +45,16 @@ fs.readFile(arquivo,"utf-8", function(err, data) {
         
         mediaSalarial();
         function mediaSalarial(){
+            var mediaSal;
             var somaSal = 0;
-            var mediaSal = 0;
+            
             for(var i = 0; i < obj.funcionarios.length; i++) {
-                somaSal = somaSal / obj.funcionarios[i].salario;
+                somaSal = somaSal + obj.funcionarios[i].salario;
             }
-            mediaSal = (somaSal + obj.funcionarios.length);
+            mediaSal = (somaSal / obj.funcionarios.length);
             
             
-            console.log("A média Salarial da empresa é: " + somaSal);
+            console.log("A média Salarial da empresa é: " + mediaSal);
             
         } 
         
