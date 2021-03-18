@@ -12,7 +12,7 @@ var nomeArquivo = "funcionarios.json";
 //mediaSalEmpresa();
 
 
-var nomSet = "Administrativo";
+//var nomSet = "Administrativo";
 //var nomSet = "Comercial";
 //var nomSet = "Produção";
 
@@ -23,7 +23,7 @@ var nomSet = "Administrativo";
 //nomeMenorSalarioSetor(nomSet);
 
 //6. Função que recebe um SETOR como parâmetro e retorna a MEDIA salarial do setor informado.
-mediaSalarialSetor(nomSet);
+//mediaSalarialSetor(nomSet);
 
 //7. Função que recebe um SETOR como parâmetro e retorna a SOMA salarial do setor informado.
 //somaSalarialSetor (nomSet);
@@ -32,6 +32,7 @@ mediaSalarialSetor(nomSet);
 //somaSalEmpresa();
 
 //leituraExemplo();
+
 function leituraExemplo(){
     fs.readFile(nomeArquivo,"utf-8",function(err,data){
         if (err){
@@ -65,8 +66,8 @@ function nomeMaiorSalario(){
           var nomeMaiorSalario = obj.funcionarios[i].nome;
         }
       }
-/*      console.log("Funcionário com o MAIOR salário da Empresa: " + nomeMaiorSalario +", com salario = "+ maiorSalEmp); */
-     
+     /* console.log("Funcionário com o MAIOR salário da Empresa: " + nomeMaiorSalario +", com salario = "+ maiorSalEmp);
+      */
     }
   });
 }
@@ -181,8 +182,8 @@ function mediaSalarialSetor (nomSetor){
           contSetor++;
         }
       }
-      /* var mediaSetor = soma / contSetor;
-      console.log("MÉDIA salarial do Setor: "+ nomSetor + " é = " + mediaSetor);
+      var mediaSetor = soma / contSetor;
+      /* console.log("MÉDIA salarial do Setor: "+ nomSetor + " é = " + mediaSetor);
       console.log(""); */
     }
   });
